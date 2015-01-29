@@ -4,5 +4,18 @@
     <string name="app_name">PAM_Resources</string>
     <string name="hello_world">Hola Mundo!</string>
     <string name="action_settings">Preferencias</string>
+    <string name="bigText">Este es un texto de introduccion</string>
+    <string name="planets_text">Planetas</string>
+    <string-array name="planets">
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Tierra</item>
+        <item>Marte</item>
+        <item>Jupiter</item>
+        <item>Saturno</item>
+        <item>Uranos</item>
+        <item>Neptuno</item>
+        <item>Pluton</item>
+    </string-array>
 
 </resources>

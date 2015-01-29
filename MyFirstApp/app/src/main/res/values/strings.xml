@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My First App</string>
+    <string name="action_settings">Preferencias</string>
+
+    <string name="txtNombre">Nombre</string>
+    <string name="editNombre">Escribe tu nombre</string>
+    <string name="txtTelefono">Teléfono</string>
+    <string name="editTelefono">Escribe	tu teléfono</string>
+    <string name="btnGuardar">Guardar</string>
+
+    <string name="errorDatosVacios">Error!! Ambos datos son requeridos</string>
+    <string name="errorNombreEditar">Error!! El nombre es requerido</string>
+    <string name="errorTelefonoEditar">Error!! El telefono es requerido</string>
+
+
+    <string name="exito">Datos guardados</string>
+
+</resources>
