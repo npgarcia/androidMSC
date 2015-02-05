@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="unpressedGreenButton">#009688</color>
+    <color name="pressedGreenButton">#4DB6AC</color>
+
+</resources>

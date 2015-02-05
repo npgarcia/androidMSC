@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/reminder_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Reminder Name"
+        />
+    <Button
+        android:id="@+id/message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminder_name"
+        android:hint="Message"/>
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminder_name"
+        android:layout_toRightOf="@+id/message_button"
+        android:hint="@string/abc_action_mode_done"/>
+
+    <Button
+        android:id="@+id/extra_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminder_name"
+        android:layout_toRightOf="@+id/done_button"
+        android:layout_alignRight="@+id/reminder_name"
+        android:background="@drawable/green_button"
+        android:hint="Fill"/>
+
+</RelativeLayout>

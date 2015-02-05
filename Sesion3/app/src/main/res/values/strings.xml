@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sesion 3</string>
+    <string name="hello_world">Aplciacion de la Sesion 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="greenButton">This is my button</string>
+    <string name="pinkButton">Linear Layout</string>
+    <string name="app_name_message">Sesion 3 Mensaje</string>
+    <string name="app_name_reminder">Sesion 3 Reminder</string>
+
+</resources>
