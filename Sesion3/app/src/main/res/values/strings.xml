@@ -8,5 +8,9 @@
     <string name="pinkButton">Linear Layout</string>
     <string name="app_name_message">Sesion 3 Mensaje</string>
     <string name="app_name_reminder">Sesion 3 Reminder</string>
+    <string-array name="countries">
+        <item>Mexico</item>
+        <item>Estados Unidos</item>
+    </string-array>
 
 </resources>

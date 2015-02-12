@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Prueba de GUI</string>
+    <string name="action_save">Guardar</string>
+    <string name="edit_name">Ingrese su nombre</string>
+    <string name="edit_phone">Ingrese su teléfono</string>
+    <string name="text_scholar">Escolaridad</string>
+    <string-array name="spinner_scholar">
+        <item>Bachillerato</item>
+        <item>Técnico</item>
+        <item>Licenciatura</item>
+        <item>Maestria</item>
+        <item>Doctorado</item>
+    </string-array>
+    <string name="text_genero">Género</string>
+    <string name="text_fem">Femenino</string>
+    <string name="text_mas">Masculino</string>
+    <string name="text_Libro">Libro Favorito</string>
+    <string-array name="auto_libro">
+        <item>Libro 1</item>
+        <item>Libro 2</item>
+        <item>Libro 3</item>
+        <item>Libro 4</item>
+        <item>Libro 5</item>
+    </string-array>
+    <string name="text_sport">Practica Deporte</string>
+    <string name="text_clean">Limpiar</string>
+
+</resources>
