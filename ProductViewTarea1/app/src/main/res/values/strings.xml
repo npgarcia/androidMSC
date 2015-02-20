@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Duvet Cover &amp; Shams</string>
+    <string name="action_example">Ejemplo acción</string>
+    <string name="action_settings">Configuración</string>
+    <string name="navigation_drawer_open">Cajón abierto</string>
+    <string name="navigation_drawer_close">Cajón cerrado</string>
+
+
+
+    <string name="selecciona_producto">Selecciona un producto</string>
+
+
+</resources>
