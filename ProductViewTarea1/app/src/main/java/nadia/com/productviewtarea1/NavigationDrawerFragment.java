@@ -3,6 +3,7 @@ package nadia.com.productviewtarea1;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
@@ -19,10 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import SandLWrapper.ProductWrapper;
@@ -56,9 +55,10 @@ public class NavigationDrawerFragment extends Fragment {
     private ActionBarDrawerToggle mDrawerToggle;
 
     private DrawerLayout mDrawerLayout;
-    private ListView mDrawerListView;
     private View mFragmentContainerView;
-    private ImageView mImageView;
+    private ListView mDrawerListView;
+    private ImageView mImageViewLogo;
+    private ImageView mImageViewNotifications;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
@@ -102,20 +102,14 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        /* Lista de Productos */
         String productos[] = ProductWrapper.getProducts();
-        ArrayAdapter<String> adapterProductos = new ArrayAdapter<String>(
+        ProductsAdapter adapterProductos = new ProductsAdapter(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                productos) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-                TextView text = (TextView) view.findViewById(android.R.id.text1);
-                text.setTextColor(getResources().getColor(R.color.textoCajon));
-                return view;
-            }
-        };
+                productos);
 
         mDrawerListView = (ListView) view.findViewById(R.id.drawer_list);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -126,11 +120,18 @@ public class NavigationDrawerFragment extends Fragment {
         });
 
         mDrawerListView.setAdapter(adapterProductos);
-        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        mDrawerListView.setItemChecked(mCurrentSelectedPosition, false);
 
-        mImageView = (ImageView) view.findViewById(R.id.image_view_logo);
-        mImageView.setImageResource(R.drawable.logo_2x);
-        ((ImageView) view.findViewById(R.id.image_view_logo_bottom)).setImageResource(R.drawable.logo_2x);
+
+        /* Logo de SandL */
+        mImageViewLogo = (ImageView) view.findViewById(R.id.image_view_logo);
+        mImageViewLogo.setImageResource(R.drawable.logo_2x);
+
+
+        /* Notificaciones */
+        mImageViewNotifications = (ImageView) view.findViewById(R.id.ivNotificationIcon);
+        mImageViewNotifications.setImageResource(R.drawable.ic_stat_social_notifications);
+
     }
 
     public boolean isDrawerOpen() {
@@ -214,7 +215,7 @@ public class NavigationDrawerFragment extends Fragment {
     private void selectItem(int position) {
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
-            mDrawerListView.setItemChecked(position, true);
+            mDrawerListView.setItemChecked(position, false);
         }
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(mFragmentContainerView);
