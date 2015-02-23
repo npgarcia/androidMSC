@@ -54,7 +54,9 @@ public class PlaceholderFragment extends Fragment {
 
         RatingBar product_rate = (RatingBar) rootView.findViewById(R.id.rate_stars);
         LayerDrawable stars = (LayerDrawable) product_rate.getProgressDrawable();
-        //stars.getDrawable(0).setColorFilter(getResources().getColor(R.color.estrellas), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.starFullySelected), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(1).setColorFilter(getResources().getColor(R.color.starPartiallySelected), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(0).setColorFilter(getResources().getColor(R.color.starNotSelected), PorterDuff.Mode.SRC_ATOP);
 
         product_description.setText(product.description);
         product_rate.setRating(product.rate);

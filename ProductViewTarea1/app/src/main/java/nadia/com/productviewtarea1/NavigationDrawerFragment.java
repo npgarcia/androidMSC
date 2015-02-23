@@ -1,16 +1,17 @@
 package nadia.com.productviewtarea1;
 
-import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -55,6 +57,7 @@ public class NavigationDrawerFragment extends Fragment {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
+    private ImageView mImageView;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
@@ -92,16 +95,20 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         String productos[] = ProductWrapper.getProducts();
-        ArrayAdapter<String> adapterProductos = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapterProductos = new ArrayAdapter<>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 productos);
 
-        View activityDrawer = (View) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
-
-        mDrawerListView = (ListView) activityDrawer.findViewById(R.id.drawer_list);
+        mDrawerListView = (ListView) view.findViewById(R.id.drawer_list);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -111,7 +118,9 @@ public class NavigationDrawerFragment extends Fragment {
 
         mDrawerListView.setAdapter(adapterProductos);
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
-        return mDrawerListView;
+
+        mImageView = (ImageView) view.findViewById(R.id.image_view_logo);
+        mImageView.setImageResource(R.drawable.logo_2x);
     }
 
     public boolean isDrawerOpen() {
@@ -205,7 +214,7 @@ public class NavigationDrawerFragment extends Fragment {
         }
     }
 
-    public int getmCurrentSelectedPosition(){
+    public int getmCurrentSelectedPosition() {
         return mCurrentSelectedPosition;
     }
 

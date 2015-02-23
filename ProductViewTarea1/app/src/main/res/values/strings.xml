@@ -6,7 +6,8 @@
     <string name="action_settings">Configuración</string>
     <string name="navigation_drawer_open">Cajón abierto</string>
     <string name="navigation_drawer_close">Cajón cerrado</string>
-
+    <string name="product_image">Imagen del producto</string>
+    <string name="sandllogo">Logotipo</string>
 
 
     <string name="selecciona_producto">Selecciona un producto</string>
