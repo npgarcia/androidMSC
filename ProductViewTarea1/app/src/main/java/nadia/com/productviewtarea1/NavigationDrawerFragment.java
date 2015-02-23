@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import SandLWrapper.ProductWrapper;
@@ -102,11 +103,19 @@ public class NavigationDrawerFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         String productos[] = ProductWrapper.getProducts();
-        ArrayAdapter<String> adapterProductos = new ArrayAdapter<>(
+        ArrayAdapter<String> adapterProductos = new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                productos);
+                productos) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(android.R.id.text1);
+                text.setTextColor(getResources().getColor(R.color.textoCajon));
+                return view;
+            }
+        };
 
         mDrawerListView = (ListView) view.findViewById(R.id.drawer_list);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -121,6 +130,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         mImageView = (ImageView) view.findViewById(R.id.image_view_logo);
         mImageView.setImageResource(R.drawable.logo_2x);
+        ((ImageView) view.findViewById(R.id.image_view_logo_bottom)).setImageResource(R.drawable.logo_2x);
     }
 
     public boolean isDrawerOpen() {

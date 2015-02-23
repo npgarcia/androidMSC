@@ -10,12 +10,17 @@
         android:adjustViewBounds="true"
         android:background="@color/cajon"
         android:contentDescription="@string/sandllogo"
-        android:padding="10dp"/>
+        android:padding="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separadorCajon"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        
         <ListView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/drawer_list"
@@ -25,10 +30,9 @@
             android:choiceMode="singleChoice"
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
-
-            tools:context=".NavigationDrawerFragment" />
+            tools:context=".NavigationDrawerFragment"
+            />
     </FrameLayout>
-
 
 </LinearLayout>
 
