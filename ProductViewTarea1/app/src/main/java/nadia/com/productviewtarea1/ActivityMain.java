@@ -1,24 +1,15 @@
 package nadia.com.productviewtarea1;
 
-import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
-import SandLWrapper.Product;
 import SandLWrapper.ProductWrapper;
 
 
@@ -34,8 +25,6 @@ public class ActivityMain extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-
-    private TextView description_label;
 
 
     @Override
@@ -101,60 +90,6 @@ public class ActivityMain extends ActionBarActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        private static int selected;
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            selected = sectionNumber;
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_activity_main, container, false);
-            Product product = new Product(ProductWrapper.getProductName(selected));
-
-            TextView product_description = (TextView) rootView.findViewById(R.id.product_label);
-            RatingBar product_rate = (RatingBar) rootView.findViewById(R.id.rate_stars);
-            ImageView product_image = (ImageView) rootView.findViewById(R.id.product_image);
-
-            product_description.setText(product.description);
-            product_rate.setRating(product.rate);
-            product_image.setImageResource(product.productImage);
-
-
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((ActivityMain) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
     }
 
 }

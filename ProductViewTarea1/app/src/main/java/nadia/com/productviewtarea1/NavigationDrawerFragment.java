@@ -93,20 +93,23 @@ public class NavigationDrawerFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         String productos[] = ProductWrapper.getProducts();
+        ArrayAdapter<String> adapterProductos = new ArrayAdapter<String>(
+                getActionBar().getThemedContext(),
+                android.R.layout.simple_list_item_activated_1,
+                android.R.id.text1,
+                productos);
 
-        mDrawerListView = (ListView) inflater.inflate(
-                R.layout.fragment_navigation_drawer, container, false);
+        View activityDrawer = (View) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+
+        mDrawerListView = (ListView) activityDrawer.findViewById(R.id.drawer_list);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                productos));
+
+        mDrawerListView.setAdapter(adapterProductos);
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
@@ -205,6 +208,7 @@ public class NavigationDrawerFragment extends Fragment {
     public int getmCurrentSelectedPosition(){
         return mCurrentSelectedPosition;
     }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
