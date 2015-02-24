@@ -9,6 +9,7 @@
     <string name="product_image">Imagen del producto</string>
     <string name="sandllogo">Logotipo</string>
     <string name="notifications_text">Notifications</string>
+    <string name="configuration_text">Configurations</string>
 
 
     <string name="selecciona_producto">Selecciona un producto</string>

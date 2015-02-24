@@ -43,29 +43,53 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="10dp">
 
                 <ImageView
                     android:id="@+id/ivNotificationIcon"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="12dp"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginRight="12dp"
-                    android:layout_centerVertical="true" />
+                    android:layout_alignParentStart="true" />
 
                 <TextView
-                    android:id="@+id/tvTitle"
+                    android:id="@+id/tvNotifications"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/ivNotificationIcon"
                     android:layout_toEndOf="@id/ivNotificationIcon"
+                    android:layout_alignBaseline="@id/ivNotificationIcon"
                     android:minHeight="?android:attr/listPreferredItemHeightSmall"
                     android:textAppearance="?android:attr/textAppearanceListItemSmall"
-                    android:gravity="center_vertical"
+                    android:gravity="top"
                     android:paddingRight="40dp"
                     android:text="@string/notifications_text"
+                    android:textColor="@color/textoCajon"/>
+
+                <ImageView
+                    android:id="@+id/ivSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingRight="12dp"
+                    android:layout_below="@id/ivNotificationIcon"/>
+
+                <TextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/ivSettings"
+                    android:layout_toEndOf="@id/ivSettings"
+                    android:layout_alignBaseline="@id/ivSettings"
+                    android:layout_below="@id/tvNotifications"
+                    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                    android:gravity="top"
+                    android:paddingRight="40dp"
+                    android:text="@string/configuration_text"
                     android:textColor="@color/textoCajon"/>
 
             </RelativeLayout>

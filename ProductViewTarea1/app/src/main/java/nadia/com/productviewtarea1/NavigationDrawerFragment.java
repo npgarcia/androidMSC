@@ -3,7 +3,6 @@ package nadia.com.productviewtarea1;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.media.Image;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
@@ -59,6 +58,7 @@ public class NavigationDrawerFragment extends Fragment {
     private ListView mDrawerListView;
     private ImageView mImageViewLogo;
     private ImageView mImageViewNotifications;
+    private ImageView mImageViewSettings;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
@@ -131,6 +131,10 @@ public class NavigationDrawerFragment extends Fragment {
         /* Notificaciones */
         mImageViewNotifications = (ImageView) view.findViewById(R.id.ivNotificationIcon);
         mImageViewNotifications.setImageResource(R.drawable.ic_stat_social_notifications);
+
+        /* Configuraciones */
+        mImageViewSettings = (ImageView) view.findViewById(R.id.ivSettings);
+        mImageViewSettings.setImageResource(R.drawable.ic_action_settings);
 
     }
 
