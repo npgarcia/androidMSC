@@ -134,7 +134,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         /* Configuraciones */
         mImageViewSettings = (ImageView) view.findViewById(R.id.ivSettings);
-        mImageViewSettings.setImageResource(R.drawable.ic_action_settings);
+        mImageViewSettings.setImageResource(R.drawable.ic_stat_action_settings);
 
     }
 
