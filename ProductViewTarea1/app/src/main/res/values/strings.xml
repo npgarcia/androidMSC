@@ -2,17 +2,18 @@
 <resources>
 
     <string name="app_name">Duvet Cover &amp; Shams</string>
-    <string name="action_example">Ejemplo acción</string>
-    <string name="action_settings">Configuración</string>
-    <string name="navigation_drawer_open">Cajón abierto</string>
-    <string name="navigation_drawer_close">Cajón cerrado</string>
-    <string name="product_image">Imagen del producto</string>
-    <string name="sandllogo">Logotipo</string>
+    <string name="technical_specs">Technical Specs</string>
+    <string name="gallery">Gallery</string>
+    <string name="features">Features</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+    <string name="product_image">Product Image</string>
+    <string name="sandllogo">Logo</string>
     <string name="notifications_text">Notifications</string>
     <string name="configuration_text">Configurations</string>
 
 
-    <string name="selecciona_producto">Selecciona un producto</string>
+    <string name="select_product">Select a Product</string>
 
 
 </resources>

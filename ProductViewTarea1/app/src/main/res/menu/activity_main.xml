@@ -3,12 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ActivityMain">
     <item
-        android:id="@+id/action_example"
-        android:showAsAction="withText|ifRoom"
-        android:title="@string/action_example" />
+        android:id="@+id/technical_specs_item"
+        app:showAsAction="never"
+        android:title="@string/technical_specs"
+        android:icon="@drawable/ic_stat_action_info"/>
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings" />
+        android:id="@+id/gallery_item"
+        app:showAsAction="never"
+        android:title="@string/gallery"
+        android:icon="@drawable/ic_stat_editor_insert_photo"/>
+    <item
+        android:id="@+id/features_item"
+        app:showAsAction="never"
+        android:title="@string/features"
+        android:icon="@drawable/ic_stat_action_description"/>
 </menu>
