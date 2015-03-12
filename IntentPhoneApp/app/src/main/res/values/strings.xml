@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Intent Phone App</string>
+
+    <string name="phone_button">Llamar</string>
+    <string name="page_button">Ir al sitio</string>
+
+</resources>
