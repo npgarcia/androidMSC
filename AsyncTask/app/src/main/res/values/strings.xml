@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AsyncTask</string>
+
+    <string name="progress_text">0%</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="start_async">Start Async Task!!</string>
+
+    <string name="start">Donde estoy?</string>
+
+    <string name="geoplugin_place">Ciudad</string>
+    <string name="geoplugin_countryCode">Pais</string>
+    <string name="geoplugin_region">Region</string>
+    <string name="geoplugin_regionAbbreviated">Abreviado</string>
+
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+
+</resources>

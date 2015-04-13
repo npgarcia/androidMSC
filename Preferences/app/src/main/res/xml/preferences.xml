@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <PreferenceCategory android:title="@string/preference_Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key1"
+            android:summary="@string/settings_OrderSummary"
+            android:title="@string/settings_Order" >
+        </CheckBoxPreference>
+        <ListPreference
+            android:entries="@array/alarmLabels"
+            android:entryValues="@array/alarmValues"
+            android:key="@string/key2"
+            android:summary="@string/settings_AlarmSummary"
+            android:title="@string/settings_Alarm" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_About" >
+        <PreferenceScreen
+            android:key="privacyPolicy"
+            android:title="@string/preference_PrivacyPolicy" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="nadia.com.preferences.ActivityPrivacyPolicy"
+                android:targetPackage="nadia.com.preferences"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="eula"
+            android:title="@string/preference_EULA" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="nadia.com.preferences.ActivityEULA"
+                android:targetPackage="nadia.com.preferences" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
