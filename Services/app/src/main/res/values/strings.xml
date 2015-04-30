@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Services</string>
+
+    <string name="example">Android Simple Service Example</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+</resources>

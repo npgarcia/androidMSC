@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sensores</string>
+
+    <string name="ver_sensores">Ver Sensores</string>
+    <string name="ver_location">Ver Ubicación</string>
+    <string name="ver_acelerometro">Ver Acelerómetro</string>
+    <string name="ver_compass">Ver Brujula</string>
+    <string name="title_activity_activity_sensors">ActivitySensors</string>
+    <string name="title_activity_activity_location">ActivityLocation</string>
+    <string name="latitude_label">Latitud</string>
+    <string name="longitud_label">Longitud</string>
+    <string name="title_activity_activity_accelerometer">ActivityAccelerometer</string>
+    <string name="title_activity_activity_compass">ActivityCompass</string>
+
+    <string name="shake">Shake to get a toast and to switch color</string>
+
+</resources>
