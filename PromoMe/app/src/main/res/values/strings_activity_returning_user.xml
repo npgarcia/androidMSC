@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="see_products">Ver mis productos</string>
+    <string name="add_products">Agregar productos</string>
+    <string name="name">Nombre de usuario</string>
+</resources>

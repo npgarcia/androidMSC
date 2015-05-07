@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="introduccion">Agregando un nuevo producto a</string>
+    <string name="instrucciones_add_product">Manten pulsada la caracteristica para agregarla al producto</string>
+    <string name="caracteristicas_llenar">Llena las siguientes caracteristicas</string>
+    <string name="agregar_producto">Agregar</string>
+    <string name="agregar_caracteristica_nueva">Otra</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="llena_valor">Inserta valor</string>
+
+    <string name="nombre_producto">Nombre </string>
+    <string name="marca_producto">Marca </string>
+    <string name="nombre_caracteristica">Caracteristica </string>
+    <string name="valor_caracteristica">Valor </string>
+    <string name="unidad_caracteristica">Unidad </string>
+</resources>

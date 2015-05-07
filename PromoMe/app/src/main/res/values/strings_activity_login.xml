@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresa o Registrate</string>
+    <string name="action_sign_in_short">Ingresa</string>
+
+    <string name="error_invalid_user">El usuario es inválido</string>
+    <string name="error_invalid_password">La contraseña es inválida</string>
+    <string name="error_incorrect_password">La contraseña es incorrecta</string>
+    <string name="error_field_required">El campo es requerido</string>
+</resources>

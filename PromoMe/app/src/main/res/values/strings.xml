@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PromoMe</string>
+    <string name="title_activity_returning_user">Usuario Registrado</string>
+
+    <string name="sign_off">Salir</string>
+    <string name="edit_profile">Editar Perfil</string>
+
+    <string name="title_activity_new_user">Usuario Nuevo</string>
+    <string name="title_activity_add_prodcut">Agregar un producto nuevo</string>
+
+    <string name="title_activity_activity_unspc">UNSPC</string>
+    <string name="title_activity_get_products">Ver Productos</string>
+    <string name="title_activity_product_detail">Detalle del producto</string>
+    <string name="title_activity_activity_add_characteristic">ActivityAddCharacteristic</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

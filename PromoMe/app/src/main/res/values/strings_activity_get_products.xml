@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="titulo">Selecciona un producto para ver su detalle</string>
+    <string name="no_hay">No hay productos para mostrar</string>
+    <string name="agregar">¿No encuentras el producto que buscas?</string>
+    <string name="detalle_producto">Detalle de </string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_product">Para agregar un producto nuevo, llena los siguientes datos</string>
+    <string name="see_product">Para ver los productos, llena los siguientes datos</string>
+    <string name="unspc_class">Clase</string>
+    <string name="unspc_family">Familia</string>
+    <string name="unspc_segment">Segmento</string>
+    <string name="unspc_producto">Producto</string>
+    <string name="unspc_system">Elige la categoría del producto</string>
+    <string name="button_get_product">Ver productos</string>
+    <string name="button_set_product">Agregar producto</string>
+</resources>

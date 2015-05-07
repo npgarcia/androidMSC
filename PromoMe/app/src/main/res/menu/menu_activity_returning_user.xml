@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="nadia.com.ActivityReturningUser">
+
+    <item
+        android:id="@+id/action_edit_profile"
+        android:orderInCategory="100"
+        android:title="@string/edit_profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_log_out"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"
+        android:title="@string/sign_off" />
+
+</menu>

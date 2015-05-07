@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nuevo_usuario">¡Bienvenido </string>
+    <string name="instrucciones">Para realizar tu registro, necesitamos los siguientes datos:</string>
+    <string name="femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+    <string name="sexo">Sexo: </string>
+    <string name="anho_nacimiento">Año de nacimiento: </string>
+    <string name="ubiacion">Ubicación: </string>
+    <string name="obteniendo_ubiacion">Estamos obteniendo tu ubicación</string>
+    <string name="espera">Espera ...</string>
+    <string name="registrame">Registrame</string>
+    <string name="sexoRequerido">Por favor selecciona tu sexo, es un dato requerido</string>
+
+</resources>

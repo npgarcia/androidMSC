@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="proveedor">Proveedor: </string>
+    <string name="no_tiene_proveedor">Ninguno</string>
+    <string name="nombre">Nombre: </string>
+    <string name="marca">Marca: </string>
+    <string name="caracteristicas">Caracteristicas: </string>
+
+</resources>
