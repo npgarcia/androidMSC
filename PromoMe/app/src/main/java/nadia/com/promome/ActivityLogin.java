@@ -111,11 +111,19 @@ public class ActivityLogin extends Activity {
             mPasswordView.setError(getString(R.string.error_field_required));
             focusView = mPasswordView;
             cancel = true;
+        } else if (password.contains(" ")){
+            mPasswordView.setError(getString(R.string.error_field_with_spaces));
+            focusView = mPasswordView;
+            cancel = true;
         }
 
         // Check for a valid user address.
         if (TextUtils.isEmpty(user)) {
             mUserView.setError(getString(R.string.error_field_required));
+            focusView = mUserView;
+            cancel = true;
+        }else if(user.contains(" ")){
+            mUserView.setError(getString(R.string.error_field_with_spaces));
             focusView = mUserView;
             cancel = true;
         }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -31,7 +32,7 @@ import nadia.com.adapters.ListStringWrapper;
 
 public class ActivityAddProduct extends ActionBarActivity {
 
-    TextView tv_unspc;
+    TextView tv_unspc, tv_que_hacer;
     ListView lv_select_caracteristica;
     Button button_siguiente;
     ListStringWrapper caracteristicas = new ListStringWrapper();
@@ -50,9 +51,12 @@ public class ActivityAddProduct extends ActionBarActivity {
         lv_select_caracteristica = (ListView) findViewById(R.id.lv_select_caracteristica);
         lv_select_caracteristica.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         unspc = intent.getStringExtra("productoUnspc");
-        new GetUnspcCharacteristics(unspc, intent.getStringExtra("userName")).execute();
 
         button_siguiente = (Button) findViewById(R.id.button_siguiente);
+        tv_que_hacer = (TextView) findViewById(R.id.tv_que_hacer);
+
+
+        new GetUnspcCharacteristics(unspc, intent.getStringExtra("userName")).execute();
 
     }
 
@@ -84,7 +88,7 @@ public class ActivityAddProduct extends ActionBarActivity {
 
         // Add the bundle to the intent.
         intent.putExtras(b);
-        intent.putExtra("unspcNumber",unspc);
+        intent.putExtra("unspcNumber", unspc);
 
         // start the ResultActivity
         startActivity(intent);
@@ -97,6 +101,13 @@ public class ActivityAddProduct extends ActionBarActivity {
         public GetUnspcCharacteristics(String unspc, String userName) {
             url = "http://54.165.43.110:8080/ProyectoFinalRest/products/products/getUnspcCharacteristicsForUser?" +
                     "unspc=" + unspc + "&user=" + userName;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            button_siguiente.setEnabled(false);
         }
 
         @Override
@@ -128,8 +139,17 @@ public class ActivityAddProduct extends ActionBarActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            adapter = new ArrayAdapter<>(ActivityAddProduct.this, android.R.layout.simple_list_item_multiple_choice, caracteristicas.getList());
-            lv_select_caracteristica.setAdapter(adapter);
+
+            if (caracteristicas.getList().size() == 0) {
+                lv_select_caracteristica.setVisibility(View.GONE);
+                tv_que_hacer.setText(getString(R.string.no_hay_generales));
+                tv_que_hacer.setGravity(Gravity.CENTER_VERTICAL);
+            }else{
+                adapter = new ArrayAdapter<>(ActivityAddProduct.this, android.R.layout.simple_list_item_multiple_choice, caracteristicas.getList());
+                lv_select_caracteristica.setAdapter(adapter);
+            }
+
+            button_siguiente.setEnabled(true);
         }
     }
 

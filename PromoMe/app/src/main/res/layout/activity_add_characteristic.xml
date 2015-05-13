@@ -10,61 +10,92 @@
     android:weightSum="1"
     tools:context="nadia.com.promome.ActivityAddCharacteristic">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/caracteristicas_llenar"
-        android:textSize="16sp" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="10dp" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nombre_producto"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/et_nombre_producto"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/marca_producto"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/et_marca_producto_producto"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"/>
-
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="124dp"
+        android:orientation="vertical"
+        android:layout_weight="0.03"
+        android:weightSum="1"
+        android:gravity="top">
 
-        <ListView
-            android:id="@+id/lv_fill_caracteristica"
+        <TextView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/caracteristicas_llenar"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nombre_producto"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_nombre_producto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/marca_producto"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_marca_producto_producto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:singleLine="true" />
+        </LinearLayout>
+<!--
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editar_valor"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/view"/> -->
+
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lv_fill_caracteristica"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.95" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="bottom|end"
         android:layout_weight=".1"
-        android:gravity="end"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_otra_caracteristica"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -73,6 +104,7 @@
 
         <Button
             android:id="@+id/button_agregar_producto"
+            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

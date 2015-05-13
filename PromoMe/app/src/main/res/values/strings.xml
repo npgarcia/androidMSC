@@ -11,7 +11,7 @@
     <string name="title_activity_activity_unspc">UNSPC</string>
     <string name="title_activity_get_products">Ver Productos</string>
     <string name="title_activity_product_detail">Detalle del producto</string>
-    <string name="title_activity_activity_add_characteristic">ActivityAddCharacteristic</string>
+    <string name="title_activity_add_characteristic">Agragegar Características</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

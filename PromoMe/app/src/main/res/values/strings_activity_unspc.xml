@@ -9,4 +9,5 @@
     <string name="unspc_system">Elige la categoría del producto</string>
     <string name="button_get_product">Ver productos</string>
     <string name="button_set_product">Agregar producto</string>
+    <string name="unspc_espera">Espera ...</string>
 </resources>

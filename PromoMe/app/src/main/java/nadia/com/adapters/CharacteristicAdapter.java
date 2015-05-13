@@ -2,11 +2,11 @@ package nadia.com.adapters;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,11 +18,14 @@ import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.URLEncoder;
+import java.sql.Array;
 import java.util.ArrayList;
 
 import nadia.com.promome.R;
@@ -40,8 +43,18 @@ public class CharacteristicAdapter extends BaseAdapter {
         for(int i = 0; i < generales.length; i++){
             Caracteristicas c = new Caracteristicas();
             c.setCaracteristica(generales[i]);
+            c.setIsGeneral(true);
             this.caracteristicas.add(c);
             new GetCharacteristicUnit(unspc,generales[i],i).execute();
+        }
+    }
+
+    public CharacteristicAdapter (ArrayList<Parcelable> chars, Context context){
+        this.context = context;
+
+        for(Parcelable par : chars){
+            Caracteristicas c = (Caracteristicas) par;
+            caracteristicas.add(c);
         }
     }
 
@@ -74,7 +87,7 @@ public class CharacteristicAdapter extends BaseAdapter {
         }
 
         TextView tv_key = (TextView)rowView.findViewById(R.id.tv_key);
-        EditText et_value = (EditText) rowView.findViewById(R.id.et_value);
+        TextView et_value = (TextView) rowView.findViewById(R.id.tv_value);
         TextView tv_units = (TextView) rowView.findViewById(R.id.tv_units);
 
         tv_key.setText(caracteristica.getCaracteristica());
@@ -82,6 +95,7 @@ public class CharacteristicAdapter extends BaseAdapter {
             et_value.setHint(R.string.llena_valor);
         else
             et_value.setText(caracteristica.getValor());
+
         tv_units.setText(caracteristica.getUnidad());
 
 
@@ -95,8 +109,9 @@ public class CharacteristicAdapter extends BaseAdapter {
         String unidad;
 
         public GetCharacteristicUnit(String unspc, String characteristicName, int position) {
+
             url = "http://54.165.43.110:8080/ProyectoFinalRest/products/products/getCharacteristicUnit?unspc=" +
-                    unspc + "&char=" + characteristicName;
+                    unspc + "&char=" + URLEncoder.encode(characteristicName);
             this.position = position;
         }
 
@@ -145,4 +160,9 @@ public class CharacteristicAdapter extends BaseAdapter {
         return caracteristicas;
     }
 
+    public void setItem(int position,Caracteristicas c){
+        caracteristicas.remove(position);
+        caracteristicas.add(position,c);
+        notifyDataSetInvalidated();
+    }
 }

@@ -21,8 +21,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:gravity="center"
-        android:text="prueba"/>
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -30,6 +29,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/tv_que_hacer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/instrucciones_add_product"
